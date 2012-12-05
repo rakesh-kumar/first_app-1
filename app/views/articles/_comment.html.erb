@@ -1,0 +1,12 @@
+
+ <div class="comment">
+  <u><li><h4><p style="color:blue">Comment by <%= comment.author_name %></h4></li></u>
+  <p style="color:green"><%= comment.body %></p>
+<p style="color:black">Posted 
+	<%= distance_of_time_in_words(comment.article.created_at, comment.created_at) %> later
+
+<%= Time.now.strftime("%m/%d/%Y") %> </p>
+
+
+
+</div>

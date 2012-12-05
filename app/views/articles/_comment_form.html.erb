@@ -1,0 +1,15 @@
+<u><h3 style="color:blue">Post a  New Comment</h3></u>
+<%= form_for @comment do |f| %>
+  <%= f.hidden_field :article_id %>
+  <p>
+    <%= f.label :author_name,"Your Name" %><br/>
+    <%= f.text_field :author_name %>
+  </p>
+  <p>
+    <%= f.label :body, "Body" %><br/>
+    <%= f.text_field :body %>
+  </p>
+  <p>
+    <%= f.submit 'Submit' %>
+  </p>
+<% end %>

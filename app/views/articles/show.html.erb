@@ -1,0 +1,23 @@
+<% if logged_in? %>
+
+<h1><%= @article.title %></h1>
+<b><p style="color:blue">Tags: <%= tag_links(@article.tags) %></p></b>
+	
+<p style="color:black"><%= image_tag @article.image.url %></p>
+
+<p style="color:black"><%= @article.body %></p>
+
+<h2><p style="color:blue">Comments(<%= @article.comments.count %>)</h2>
+<%= render partial: 'comment', collection: @article.comments %>
+
+<%= link_to "Delete", article_path(@article), method: :delete, :confirm => "Really delete the article?" %>
+
+<p><%= link_to "Edit" , edit_article_path(@articles) %></h3>
+
+</p>
+
+<%= render partial: 'comment_form' %>
+<%= link_to "back to the Articles" , articles_path %>
+</p>
+	
+<% end %> 

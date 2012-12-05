@@ -1,0 +1,18 @@
+
+%h2 Login
+
+= form_tag author_sessions_path, method: :post do
+  .field
+    = label_tag :username
+    = text_field_tag :username
+    %br/
+  .field
+    = label_tag :password
+    = password_field_tag :password
+    %br/
+  .actions
+    = submit_tag "Login"
+
+= link_to 'Back to Articles', articles_path
+%h4 Default User-name  admin
+%h4 Default Password is admin
